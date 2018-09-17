@@ -3213,3 +3213,12 @@ For more information see
 or `msvc documentation <https://docs.microsoft.com/pl-pl/cpp/cpp/selectany>`_.
 }];
 }
+
+// TODO fix and test
+def PassHintDocs : Documentation {
+  let Category = DocCatStmt;
+  let Heading = "[[optenable]]";
+  let Content = [{
+Specifies passes.
+  }];
+}

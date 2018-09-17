@@ -1144,6 +1144,10 @@ void CodeGenFunction::StartFunction(GlobalDecl GD,
   // Emit a location at the end of the prologue.
   if (CGDebugInfo *DI = getDebugInfo())
     DI->EmitLocation(Builder, StartLoc);
+  // Add custom PassHint attributes
+  // TODO
+  if (D->hasAttr<PassHintAttr>())
+    Fn->addFnAttr("passhint-todo");
 }
 
 void CodeGenFunction::EmitFunctionBody(FunctionArgList &Args,

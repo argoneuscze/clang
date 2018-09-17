@@ -2784,3 +2784,10 @@ def InternalLinkage : InheritableAttr {
   let Subjects = SubjectList<[Var, Function, CXXRecord]>;
   let Documentation = [InternalLinkageDocs];
 }
+
+// TODO cover both enable/disable
+def PassHint : InheritableAttr {
+  let Spellings = [GNU<"optenable">, CXX11<"", "optenable", 201809>];
+  let Subjects = SubjectList<[Function]>;
+  let Documentation = [PassHintDocs];
+}
